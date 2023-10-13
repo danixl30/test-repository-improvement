@@ -2,12 +2,12 @@ import { ApplicationService } from 'src/core/application/service/application.ser
 import { GetProductByIdDTO } from './types/dto'
 import { GetProductByIdResponse } from './types/response'
 import { ApplicationError } from 'src/core/application/error/application.error'
-import { ProductRepository } from '../../repositories/product.repository'
+import { ProductRepository } from '../../repositories/product'
 import { Result } from 'src/core/application/result-handler/result.handler'
 import { ProductId } from 'src/product/domain/value-objects/id'
 
 export class GetProductByIdQuery
-    implements
+implements
         ApplicationService<
             GetProductByIdDTO,
             GetProductByIdResponse,

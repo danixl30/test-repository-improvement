@@ -1,11 +1,11 @@
 import { ApplicationService } from 'src/core/application/service/application.service'
 import { GetAllProductsResponse } from './types/response'
 import { ApplicationError } from 'src/core/application/error/application.error'
-import { ProductRepository } from '../../repositories/product.repository'
+import { ProductRepository } from '../../repositories/product'
 import { Result } from 'src/core/application/result-handler/result.handler'
 
 export class GetAllProductsQuery
-    implements
+implements
         ApplicationService<undefined, GetAllProductsResponse, ApplicationError>
 {
     constructor(private productRepository: ProductRepository) {}

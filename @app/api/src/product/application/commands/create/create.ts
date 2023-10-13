@@ -3,14 +3,14 @@ import { CreateProductDTO } from './types/dto'
 import { CreateProductResponse } from './types/response'
 import { ApplicationError } from 'src/core/application/error/application.error'
 import { Result } from 'src/core/application/result-handler/result.handler'
-import { ProductRepository } from '../../repositories/product.repository'
+import { ProductRepository } from '../../repositories/product'
 import { ProductName } from 'src/product/domain/value-objects/name'
 import { Product } from 'src/product/domain/product'
 import { UUIDGenerator } from 'src/core/application/UUID/UUID.generator'
 import { ProductId } from 'src/product/domain/value-objects/id'
 
 export class CreateProductCommand
-    implements
+implements
         ApplicationService<
             CreateProductDTO,
             CreateProductResponse,

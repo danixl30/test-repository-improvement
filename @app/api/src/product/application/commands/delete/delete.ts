@@ -1,13 +1,13 @@
 import { ApplicationService } from 'src/core/application/service/application.service'
 import { ApplicationError } from 'src/core/application/error/application.error'
 import { Result } from 'src/core/application/result-handler/result.handler'
-import { ProductRepository } from '../../repositories/product.repository'
+import { ProductRepository } from '../../repositories/product'
 import { ProductId } from 'src/product/domain/value-objects/id'
 import { DeleteProductResponse } from './types/response'
 import { DeleteProductDTO } from './types/dto'
 
 export class DeleteProductCommand
-    implements
+implements
         ApplicationService<
             DeleteProductDTO,
             DeleteProductResponse,
